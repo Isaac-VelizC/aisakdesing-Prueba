@@ -11,12 +11,16 @@ type DialogViewProps = DialogProps & {
   title?: string;
   children: React.ReactNode;
   onClose: () => void;
+  onDelete: () => void;
+  onUpdate?: () => void;
 };
 
 export function ModalView({
   title,
   children,
   onClose,
+  onDelete,
+  onUpdate,
   open,
   ...other
 }: DialogViewProps) {
@@ -31,9 +35,15 @@ export function ModalView({
       onClose={onClose}
       {...other}
     >
-      <DialogTitle>{title}</DialogTitle>
+      <DialogTitle variant={'h3'}>{title}</DialogTitle>
       <DialogContent>{children}</DialogContent>
       <DialogActions>
+        <Button variant="contained" color="error" onClick={onDelete}>
+          Eliminar
+        </Button>
+        <Button variant="contained" color="warning" onClick={onUpdate}>
+          Update
+        </Button>
         <Button variant="contained" color="secondary" onClick={onClose}>
           Close
         </Button>

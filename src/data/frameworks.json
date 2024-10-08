@@ -1,0 +1,87 @@
+[
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+        "name": "React",
+        "url": "https://reactjs.org/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Angular_gradient.png",
+        "name": "Angular",
+        "url": "https://angular.io/"
+    },
+    {
+        "logo": "https://vuejs.org/images/logo.png",
+        "name": "Vue.js",
+        "url": "https://vuejs.org/"
+    },
+    {
+        "logo": "https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg",
+        "name": "Bootstrap",
+        "url": "https://getbootstrap.com/"
+    },
+    {
+        "logo": "https://www.svgrepo.com/show/353751/flutter.svg",
+        "name": "Flutter",
+        "url": "https://flutter.dev/"
+    },
+    {
+        "logo": "https://laravel.com/img/logomark.min.svg",
+        "name": "Laravel",
+        "url": "https://laravel.com/"
+    },
+    {
+        "logo": "https://www.svgrepo.com/show/305963/django.svg",
+        "name": "Django",
+        "url": "https://www.djangoproject.com/"
+    },
+    {
+        "logo": "https://cdn.iconscout.com/icon/free/png-512/ruby-on-rails-1175193.png",
+        "name": "Ruby on Rails",
+        "url": "https://rubyonrails.org/"
+    },
+    {
+        "logo": "https://cdn.worldvectorlogo.com/logos/spring-3.svg",
+        "name": "Spring",
+        "url": "https://spring.io/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a8/NestJS.svg",
+        "name": "NestJS",
+        "url": "https://nestjs.com/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+        "name": "Node.js",
+        "url": "https://nodejs.org/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
+        "name": "Express.js",
+        "url": "https://expressjs.com/"
+    },
+    {
+        "logo": "https://cdn.worldvectorlogo.com/logos/jquery-4.svg",
+        "name": "jQuery",
+        "url": "https://jquery.com/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/3/30/Redux_Logo.png",
+        "name": "Redux",
+        "url": "https://redux.js.org/"
+    },
+    {
+        "logo": "https://svelte.dev/svelte-logo-horizontal.svg",
+        "name": "Svelte",
+        "url": "https://svelte.dev/"
+    },
+    {
+        "logo": "https://www.electronjs.org/images/electron-logo.svg",
+        "name": "Electron",
+        "url": "https://www.electronjs.org/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+        "name": "Tailwindcss",
+        "url": "https://tailwindcss.com/"
+    }
+]

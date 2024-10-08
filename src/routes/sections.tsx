@@ -10,10 +10,7 @@ import { varAlpha } from "src/theme/styles";
 import { DashboardLayout } from "src/layouts/dashboard";
 import { AuthLayout } from "src/layouts/auth";
 import PageProducts from "src/containers/Pages/products";
-import PageBlogs from "src/containers/Pages/blogs";
-import PagePayments from "src/containers/Pages/payments";
 import PageProductStore from "src/containers/Pages/products/product-store";
-import PageBlogsStore from "src/containers/Pages/blogs/blog-store";
 import {ProtectedRoute} from "./ProtectedRouter";
 import { PublicRoute } from "./PublicRoute";
 
@@ -62,9 +59,6 @@ export function Router() {
             { path: 'user', element: <PageUsers /> },
             { path: 'products', element: <PageProducts /> },
             { path: 'product-store', element: <PageProductStore /> },
-            { path: 'blog', element: <PageBlogs /> },
-            { path: 'blog-store', element: <PageBlogsStore /> },
-            { path: 'payments', element: <PagePayments /> },
           ],
         },
       ],

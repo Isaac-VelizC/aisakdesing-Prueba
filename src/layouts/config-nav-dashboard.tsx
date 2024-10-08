@@ -27,15 +27,5 @@ export const navData = [
         </Label>
       ),
     },
-    {
-      title: 'Blog',
-      path: '/blog',
-      icon: icon('ic-blog'),
-    },
-    {
-      title: 'Payments',
-      path: '/payments',
-      icon: icon('ic-payment'),
-    },
   ];
   

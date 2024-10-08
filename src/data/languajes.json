@@ -1,0 +1,87 @@
+[
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+        "languaje": "JavaScript",
+        "url": "https://www.javascript.com/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+        "languaje": "Python",
+        "url": "https://www.python.org/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg",
+        "languaje": "C",
+        "url": "https://en.wikipedia.org/wiki/C_(programming_language)"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
+        "languaje": "C++",
+        "url": "https://en.cppreference.com/w/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
+        "languaje": "C#",
+        "url": "https://learn.microsoft.com/en-us/dotnet/csharp/"
+    },
+    {
+        "logo": "https://cdn.freebiesupply.com/logos/large/2x/java-logo-png-transparent.png",
+        "languaje": "Java",
+        "url": "https://www.java.com/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg",
+        "languaje": "Go",
+        "url": "https://go.dev/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/5/57/Devicon-ruby-plain-wordmark.svg",
+        "languaje": "Ruby",
+        "url": "https://www.ruby-lang.org/"
+    },
+    {
+        "logo": "https://www.svgrepo.com/show/452110/swift.svg",
+        "languaje": "Swift",
+        "url": "https://developer.apple.com/swift/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png",
+        "languaje": "Kotlin",
+        "url": "https://kotlinlang.org/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg",
+        "languaje": "R",
+        "url": "https://www.r-project.org/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg",
+        "languaje": "SQL",
+        "url": "https://www.mysql.com/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
+        "languaje": "PHP",
+        "url": "https://www.php.net/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Haskell-Logo.svg",
+        "languaje": "Haskell",
+        "url": "https://www.haskell.org/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/3/39/Scala-full-color.svg",
+        "languaje": "Scala",
+        "url": "https://www.scala-lang.org/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Lua-Logo.svg",
+        "languaje": "Lua",
+        "url": "https://www.lua.org/"
+    },
+    {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
+        "languaje": "TypeScript",
+        "url": "https://www.typescriptlang.org/"
+    }
+]

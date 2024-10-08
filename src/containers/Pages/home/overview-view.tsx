@@ -2,8 +2,7 @@ import { DashboardContent } from "src/layouts/dashboard";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid2";
 import { AnalyticsWidgetSummary } from "./widget-summary";
-import { _posts, _tasks } from "src/_mock";
-import { AnalyticsNews } from "./analytics-news";
+import { _tasks } from "src/_mock";
 import { AnalyticsTrafficBySite } from "./analytics-traffic-by-site";
 import { AnalyticsTasks } from "./analytics-tasks";
 
@@ -75,9 +74,6 @@ export function OverviewView() {
               series: [56, 30, 23, 54, 47, 40, 62, 73],
             }}
           />
-        </Grid>
-        <Grid size={{ xs: 12, md: 8, lg: 12 }}>
-          <AnalyticsNews title="News" list={_posts.slice(0, 5)} />
         </Grid>
         <Grid size={{xs: 12, md: 6, lg: 4}}>
         <AnalyticsTrafficBySite
