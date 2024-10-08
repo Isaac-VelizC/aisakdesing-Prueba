@@ -10,38 +10,47 @@ import InputAdornment from "@mui/material/InputAdornment";
 import { Helmet } from "react-helmet-async";
 import { Iconify } from "src/components/iconify";
 import { useRouter } from "src/routes/hooks";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./../../firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
 
-function SignIn() {
+function SignUp() {
   const router = useRouter();
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSignIn = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      console.log('Logged in successfully');
-      router.push("/");
-    } catch (error) {
-      console.error('Error logging in with email and password:', error);
-    } finally {
-      setLoading(false);
-    }
-  }, [email, password, router]);
+  const handleSignIn = useCallback(
+    async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      setLoading(true);
+      try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        console.log("User registered successfully");
+        router.push("/");
+      } catch (error) {
+        console.error("Error registering user:", error);
+      } finally {
+        setLoading(false);
+      }
+    },
+    [email, password, router]
+  );
 
   const renderForm = (
-    <Box component={'form'} onSubmit={handleSignIn} display="flex" flexDirection="column" alignItems="flex-end">
+    <Box
+      component={"form"}
+      onSubmit={handleSignIn}
+      display="flex"
+      flexDirection="column"
+      alignItems="flex-end"
+    >
       <TextField
         fullWidth
         name="email"
         label="Email address"
         value={email}
-        onChange={(e) => setEmail(e.target.value)}  // Actualiza el valor de email
+        onChange={(e) => setEmail(e.target.value)} // Actualiza el valor de email
         InputLabelProps={{ shrink: true }}
         sx={{ mb: 3 }}
       />
@@ -51,7 +60,7 @@ function SignIn() {
         name="password"
         label="Password"
         value={password}
-        onChange={(e) => setPassword(e.target.value)}  // Actualiza el valor de password
+        onChange={(e) => setPassword(e.target.value)} // Actualiza el valor de password
         InputLabelProps={{ shrink: true }}
         type={showPassword ? "text" : "password"}
         InputProps={{
@@ -72,29 +81,16 @@ function SignIn() {
         }}
         sx={{ mb: 3 }}
       />
-      <Link
-        variant="body2"
-        color="inherit"
-        sx={{
-          cursor: "pointer",
-          mb: 2,
-          ":hover": {
-            color: "primary.main", 
-            textDecoration: "underline",
-          },
-        }}
-      >
-        Forgot password?
-      </Link>
+
       <LoadingButton
         fullWidth
         size="large"
         type="submit"
         color="inherit"
         variant="contained"
-        loading={loading}  // Muestra el estado de carga
+        loading={loading} // Muestra el estado de carga
       >
-        Sign in
+        Sign Up
       </LoadingButton>
     </Box>
   );
@@ -102,7 +98,7 @@ function SignIn() {
   return (
     <>
       <Helmet>
-        <title>{`Sign in - YourAppName`}</title>
+        <title>{`Sign Up - AIsakVeliz`}</title>
       </Helmet>
       <Box
         gap={1.5}
@@ -111,11 +107,11 @@ function SignIn() {
         alignItems="center"
         sx={{ mb: 5 }}
       >
-        <Typography variant="h5">Sign in</Typography>
+        <Typography variant="h5">Sign Up</Typography>
         <Typography variant="body2" color="text.secondary">
-          Don’t have an account?
-          <Link variant="subtitle2" sx={{ ml: 0.5 }} href="sing-up">
-            Get started 
+          have an account?
+          <Link variant={"subtitle2"} sx={{ ml: 0.5 }} href="/sing-in">
+            Get started
           </Link>
         </Typography>
       </Box>
@@ -125,4 +121,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default SignUp;

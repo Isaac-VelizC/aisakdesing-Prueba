@@ -14,11 +14,14 @@ import PageBlogs from "src/containers/Pages/blogs";
 import PagePayments from "src/containers/Pages/payments";
 import PageProductStore from "src/containers/Pages/products/product-store";
 import PageBlogsStore from "src/containers/Pages/blogs/blog-store";
+import {ProtectedRoute} from "./ProtectedRouter";
+import { PublicRoute } from "./PublicRoute";
 
 export const PageHome = lazy(() => import("src/containers/Pages/home"));
 export const PageUsers = lazy(() => import("src/containers/Pages/users"));
 
 export const SignIn = lazy(() => import("src/containers/auth/SignIn"));
+export const SignUp = lazy(() => import("src/containers/auth/Singup"));
 export const Error404 = lazy(() => import("src/containers/Error/error404"));
 
 const renderFallback = (
@@ -43,29 +46,46 @@ export function Router() {
   return useRoutes([
     {
       element: (
-        <DashboardLayout>
-          <Suspense fallback={renderFallback}>
-            <Outlet />
-          </Suspense>
-        </DashboardLayout>
+        <ProtectedRoute />
       ),
       children: [
-        { element: <PageHome />, index: true },
-        { path: 'user', element: <PageUsers /> },
-        { path: 'products', element: <PageProducts /> },
-        { path: 'product-store', element: <PageProductStore /> },
-        { path: 'blog', element: <PageBlogs /> },
-        { path: 'blog-store', element: <PageBlogsStore /> },
-        { path: 'payments', element: <PagePayments /> },
+        {
+          element: (
+            <DashboardLayout>
+              <Suspense fallback={renderFallback}>
+                <Outlet />
+              </Suspense>
+            </DashboardLayout>
+          ),
+          children: [
+            { element: <PageHome />, index: true },
+            { path: 'user', element: <PageUsers /> },
+            { path: 'products', element: <PageProducts /> },
+            { path: 'product-store', element: <PageProductStore /> },
+            { path: 'blog', element: <PageBlogs /> },
+            { path: 'blog-store', element: <PageBlogsStore /> },
+            { path: 'payments', element: <PagePayments /> },
+          ],
+        },
       ],
     },
     {
-      path: "sing-in",
       element: (
-        <AuthLayout>
-          <SignIn />
-        </AuthLayout>
+        <PublicRoute/>
       ),
+      children: [
+        {
+          element: (
+            <AuthLayout>
+              <Outlet/>
+            </AuthLayout>
+          ), 
+          children: [
+            { path: 'sing-in', element: <SignIn /> },
+            { path: 'sing-up', element: <SignUp /> },
+          ]
+        }
+      ]
     },
     {
       path: "404",
